@@ -32,41 +32,76 @@
 
 body {
 	background: #151515;										/* Page background */
-	color: #999;														/* Font color */
-	padding: 150px;													/* Padding between link blocks and edge */
-	font-family: "Museo", "Helvetica Neue", sans-serif;	/* Font */
-	text-shadow: rgba(0,0,0,0.6) 1px 1px 0; /* Text Shadow */
+	background-image: url('images/Island_Road_by_dobee.jpg');
+	background-position: center top;
+	padding: 150px;												/* Padding between link blocks and edge */
+	color: rgba(255, 255, 255, 0.75);												/* Font color */
+	font-family: "Futura", "Helvetica Neue", sans-serif;			/* Font */
+	//text-shadow: rgba(0,0,0,0.6) 1px 1px 0; 					/* Text Shadow */
 }
 
+.block {
+	border-left: 1px solid #999;								/* Left border of link block */
+	float: left;
+	padding: 1em;												/* Padding around link block */
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	width: 10%;												/* Link block width */ 
+	min-width: 60px;
+	background: rgba(0,0,0,0.2);
+	//background: rgba(255,255,255,0.2);
+	//-webkit-filter: blur(2px);
+}
+
+h1 {
+	margin: 0;
+	font-size: 2em;												/* Title size */
+	font-weight: 100;
+	font-family: /*"Futura",*/ "Helvetica Neue", sans-serif;			/* Font */
+	//-webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.5));
+}
+
+h2 {
+	margin: 0;
+	padding-left: 0.2em;
+	font-family: /*"Futura",*/ "Helvetica Neue", sans-serif;			/* Font */
+	font-size: 0.8em;												/* SubTitle size */
+	font-weight: 100;
+	letter-spacing:0.1em;
+	text-align: right;
+}
+
+ul {
+	/*var.width*///position: absolute;
+	/*var.width*///margin-left: -1.05em;
+	/*var.width*///margin-top: 0.7em;
+	/*var.width*///padding: 1em;
+	padding: 0;
+	padding-top: 0.7em;
+	/*var.width*///border-left: 1px solid #999;
+	/*var.width*///background: rgba(0,0,0,0.2);
+}
+
+ul li {
+	list-style: none;
+	//padding: 5px;
+}
+
+/*
+ul li:hover {
+	background: rgba(0,0,0,0.2);
+}*/
+
 a {
-	color: #999;														/* Link Color */
+	color: rgba(255, 255, 255, 0.75);														/* Link Color */
 	font-size: 11px;												/* Link Size */
 	text-decoration: none;									/* Remove underlines */
 }
 
 a:hover {
-	color: #ddd;														/* Link hover color */
-}
-
-.block {
-	border-left: 1px solid #999;						/* Left border of link block */
-	float: left;
-	padding: 1em;														/* Padding around link block */
-	width: 140px;														/* Link block width */
-}
-
-h1 {
-	margin: 0;
-	font-size: 1.5em;												/* Title size */
-}
-
-ul {
-	padding: 0.25em;
-}
-
-ul li {
-	list-style: none;
-	padding: 5px;
+	color: rgba(255, 255, 255, 1);														/* Link hover color */
+	//-webkit-filter: drop-shadow(0px 0px 3px rgba(255,255,255,0.5));
+	text-shadow: rgba(255,255,255,0.5) 0 0 3px; 					/* Text Shadow */
 }
 
 #searches {
@@ -80,6 +115,8 @@ ul li {
 	bottom: 10px;
 	right: 10px;
 	font-size: 2em;
+	color: rgba(255,255,255,0.3);
+	text-shadow: rgba(0,0,0,0.3) 0 0 1px; 					/* Text Shadow */
 }
 
 form {
@@ -87,43 +124,53 @@ form {
 }
 
 form input {
-	background: #333;												/* Background search box */
+	background: transparent;												/* Background search box */
 	background: -webkit-gradient(						/*		gradient for webkit */
 		linear,
 		left top,
 		left bottom,
-		from(#222),
-		to(#333));
-	background: -moz-linear-gradient(				/*		gradient for gecko */
+		from(rgba(255,255,255,0.0)),
+		to(rgba(255,255,255,0.2)));
+	/*background: -moz-linear-gradient(				//		gradient for gecko 
 		top,
 		#222,
-		#333);
-	border: 1px solid #444;									/* Border search box */
-	-webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 2px;	/* Shadow search box - webkit */
-	-moz-box-shadow: rgba(0,0,0,0.2) 0 1px 2px;			/* Shadow search box - gecko */
-	box-shadow: rgba(0,0,0,0.2) 0 1px 2px;					/* Shadow search box - generic */
-	color: #ddd;														/* Text color search box */
-	font-size: 1em;													/* Text size search box */
+		#333);*/
+	border: 1px solid rgba(0,0,0,0.6);									/* Border search box */
+	padding: 3px;
+	//-webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 2px;	/* Shadow search box - webkit */
+	//-moz-box-shadow: rgba(0,0,0,0.2) 0 1px 2px;			/* Shadow search box - gecko */
+	box-shadow: rgba(255,255,255,0.1) 0  0 15px;					/* Shadow search box - generic */
+	font-family: /*"Futura",*/ "Helvetica Neue", sans-serif;			/* Font */
+	font-weight: 200;
+	font-size: 0.75em;													/* Text size search box */
+	letter-spacing:0.1em;
+	color: rgba(255,255,255,0.75);														/* Text color search box */
 }
 
 form input:first-child {
-	-webkit-border-top-left-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-moz-border-radius-topleft: 5px;
-	-moz-border-radius-bottomleft: 5px;
+	//-webkit-border-top-left-radius: 5px;
+	//-webkit-border-bottom-left-radius: 5px;
+	//-moz-border-radius-topleft: 5px;
+	//-moz-border-radius-bottomleft: 5px;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	border-right: 0;
+	margin-right: 0px;
+	min-height: 1em;
 }
 
 form input:last-child {
-	-webkit-border-top-right-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-moz-border-radius-bottomright: 5px;
+	//-webkit-border-top-right-radius: 5px;
+	//-webkit-border-bottom-right-radius: 5px;
+	//-moz-border-radius-topright: 5px;
+	//-moz-border-radius-bottomright: 5px;
+	background: rgba(0,0,0,0.2);												/* Background search box */
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
-	border-left: 0;
+	border-left: 1px solid rgba(0,0,0,0.6);
+	margin-left: 0px;
+	min-height: 1em;
+	text-shadow: rgba(255,255,255,0.5) 0 0 5px; 					/* Text Shadow */
 }
 /* cc BY-NC-SA License :: k3ttc4r :: 2008 :: http://k3ttc4r.deviantart.com */
 /* background by Alexander-GG :: http://alexander-gg.deviantart.com */
